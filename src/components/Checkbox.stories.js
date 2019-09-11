@@ -1,45 +1,121 @@
 import React from 'react';
-import { action } from '@storybook/addon-actions';
 
-import { Checkbox } from './Checkbox';
+// import { Checkbox } from './Checkbox';
 
-const onChange = action('change');
+// const onChange = action('change');
+
+const Checkbox = () => {
+  const [checked, setChecked] = React.useState(false);
+  return (
+    <form>
+      <div role="group" aria-labelledby="id-group-label">
+        {/*
+        wrapping a checkbox in a label makes the text also clickable,
+        which is an accessibility requirement
+      */}
+        <label>
+          <input
+            type="checkbox"
+            onChange={e => setChecked(e.target.checked)}
+            checked={checked}
+            tabIndex={0}
+            aria-checked={checked}
+          />
+          Option 1
+        </label>
+      </div>
+    </form>
+  );
+};
 
 export default {
   title: 'Design System|forms/Checkbox',
   component: Checkbox,
 };
 
-export const allCheckboxes = () => (
-  <form>
-    <Checkbox id="Unchecked" label="Cats" hideLabel onChange={onChange} />
-    <Checkbox id="Checked" label="Cats" hideLabel checked onChange={onChange} />
-    <Checkbox
-      id="With-label-and-error"
-      label="Cats"
-      onChange={onChange}
-      error="There's a snake in my boots"
-    />
-    <Checkbox id="With-label" label="Cats" onChange={onChange} />
-    <Checkbox
-      appearance="secondary"
-      id="With-label"
-      label="Secondary"
-      checked
-      onChange={onChange}
-    />
-    <Checkbox appearance="secondary" id="With-label" label="Secondary" onChange={onChange} />
-  </form>
-);
+// const OneCheckbox = () => {
+//   const [checked, setChecked] = useState(false);
+//   return (
+//     <form>
+//       <div role="group" aria-labelledby="id-group-label">
+//         {/*
+//         wrapping a checkbox in a label makes the text also clickable,
+//         which is an accessibility requirement
+//       */}
+//         <label>
+//           <input
+//             type="checkbox"
+//             onChange={e => setChecked(e.target.checked)}
+//             checked={checked}
+//             tabIndex={0}
+//             aria-checked={checked}
+//           />
+//           Option 1
+//         </label>
+//       </div>
+//     </form>
+//   );
+// };
 
-allCheckboxes.story = {
-  name: 'all checkboxes',
+export const DefaultCheckbox = () => {
+  return React.createElement(() => {
+    // eslint-disable-next-line
+    const [checked, setChecked] = React.useState(false);
+    return (
+      <form>
+        <div role="group" aria-labelledby="id-group-label">
+          {/*
+        wrapping a checkbox in a label makes the text also clickable,
+        which is an accessibility requirement
+      */}
+          <label>
+            <input
+              type="checkbox"
+              onChange={e => setChecked(e.target.checked)}
+              checked={checked}
+              tabIndex={0}
+              aria-checked={checked}
+            />
+            Option 1
+          </label>
+        </div>
+      </form>
+    );
+  });
 };
 
-export const unchecked = () => (
-  <Checkbox id="Unchecked" label="Cats" hideLabel onChange={onChange} />
-);
+// export const DefaultCheckbox = () => {
+//   const [checked, setChecked] = React.useState(false);
+//   return (
+//     <form>
+//       <div role="group" aria-labelledby="id-group-label">
+//         {/*
+//         wrapping a checkbox in a label makes the text also clickable,
+//         which is an accessibility requirement
+//       */}
+//         <label>
+//           <input
+//             type="checkbox"
+//             onChange={e => setChecked(e.target.checked)}
+//             checked={checked}
+//             tabIndex={0}
+//             aria-checked={checked}
+//           />
+//           Option 1
+//         </label>
+//       </div>
+//     </form>
+//   );
+// };
 
-export const checked = () => (
-  <Checkbox id="Checked" label="Cats" hideLabel checked onChange={onChange} />
-);
+// AllCheckboxes.story = {
+//   name: 'all checkboxes',
+// };
+
+// export const unchecked = () => (
+//   <Checkbox id="Unchecked" label="Cats" hideLabel onChange={onChange} />
+// );
+
+// export const checked = () => (
+//   <Checkbox id="Checked" label="Cats" hideLabel checked onChange={onChange} />
+// );
