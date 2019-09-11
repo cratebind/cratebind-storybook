@@ -24,4 +24,4 @@ jobs:
       # - run: yarn lint
 
       - run: yarn build-storybook
-      - run: yarn chromatic --storybook-build-dir storybook-static --exit-zero-on-changes
+      # - run: yarn chromatic --storybook-build-dir storybook-static --exit-zero-on-changes
