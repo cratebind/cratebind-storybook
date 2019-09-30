@@ -1,5 +1,5 @@
-import React from 'react';
-import Checkbox from '../components/Checkbox';
+import React, { useState } from 'react';
+import Checkbox, { CustomCheckbox } from '../components/Checkbox';
 
 export default {
   title: 'Checkbox',
@@ -13,6 +13,18 @@ export const nativeBrowserCheckbox = () => (
     <Checkbox>Option 1</Checkbox>
   </form>
 );
+
+export const customCheckbox = () => {
+  const [checked, setChecked] = useState(false);
+
+  return (
+    <form>
+      <CustomCheckbox checked={checked} onChange={setChecked}>
+        Option 1
+      </CustomCheckbox>
+    </form>
+  );
+};
 
 // export const emoji = () => (
 //   <Button onClick={action('clicked')}>
