@@ -14,3 +14,27 @@ before_install:
   - export PATH=$HOME/.yarn/bin:$PATH
 after_success:
   - bash <(curl -s https://codecov.io/bash)
+
+language: node_js
+node_js:
+  - 10
+
+jobs:
+  include:
+    - stage: test
+    - script:
+      - yarn lint
+      - yarn type-check
+      - yarn test --coverage
+      - yarn build
+  include:
+    # Define the release stage that runs semantic-release
+    - stage: release
+      node_js: lts/*
+      # Advanced: optionally overwrite your default `script` step to skip the tests
+      # script: skip
+      deploy:
+        provider: script
+        skip_cleanup: true
+        script:
+          - npx semantic-release

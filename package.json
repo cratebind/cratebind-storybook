@@ -33,6 +33,7 @@
     "dev": "start-storybook -p 9009 -s public --docs",
     "start": "rollup -c -w",
     "build": "rollup -c",
+    "lint": "eslint .",
     "type-check": "tsc --noEmit",
     "prepublish": "yarn run build",
     "test": "react-scripts test",
