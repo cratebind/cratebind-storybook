@@ -6,7 +6,6 @@ export type Props = {
 }
 
 const Button = ({ onClick, children, ...props }: Props) => {
-
   return <button onClick={onClick} {...props}>{children}</button>
 }
 
