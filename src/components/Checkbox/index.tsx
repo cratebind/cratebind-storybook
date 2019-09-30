@@ -1,79 +1,74 @@
 import React from 'react';
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
+const Label = styled.label`
+  cursor: pointer;
+  position: relative;
+  height: 1em;
+  display: flex;
+  align-items: center;
+`;
+
+const CheckboxInput = styled.div`
+  margin: 0 0.4em 0 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  background-color: ${(p: { checked: boolean }) => p.checked ? '#007bff' : '#fff'};
+  box-shadow: rgb(153, 153, 153) 0px 0px 0px 1px inset;
+`;
+
+const LabelText = styled.span``;
 
 export type CheckboxHTMLProps = React.InputHTMLAttributes<any>;
 
 export type CustomProps = {
   children?: React.ReactNode
-  labelClassName?: string
   onChange: (checked: boolean) => void
   checked: boolean
 }
 
 export type CheckboxProps = CheckboxHTMLProps & CustomProps;
 
-const Checkbox = ({ checked, children, labelClassName, ...props }: CheckboxProps) => {
-  return (
-    <label className={labelClassName}>
-      <input
-        type="checkbox"
-        checked={checked}
-        aria-checked={checked}
-        tabIndex={0}
-        {...props}
-      />
-      {children}
-    </label>
-  );
-};
-
-const CustomCheckbox = ({ checked, onChange, children, labelClassName }: CheckboxProps) => {
+const Checkbox = ({ checked, onChange, children, ...props }: CheckboxProps) => {
   const toggleChecked = () => {
     onChange(!checked)
   }
 
   return (
-    <label
-      className={labelClassName}
+    <Label
       onClick={toggleChecked}
       onKeyDown={(e) => {
-          e.preventDefault();
-          // toggle when focused and spacebar is hit
-          if (e.keyCode === 32) {
-            toggleChecked();
-          }
-        }}
-        tabIndex={0}
-        role="checkbox"
-        aria-checked={checked}
-      >
-        <div
-          style={{
-            width: 20,
-            height: 20,
-            borderRadius: 8,
-            backgroundColor: checked ? '#007bff' : '#fff'
-          }}
-        />
+        e.preventDefault();
+        // toggle when focused and spacebar is hit
+        if (e.keyCode === 32) {
+          toggleChecked();
+        }
+      }}
+      tabIndex={0}
+      role="checkbox"
+      aria-checked={checked}
+    >
+      <CheckboxInput
+        checked={checked}
+      />
+      <LabelText>
         {children}
-      </label>
-  )
-}
+      </LabelText>
+    </Label>
+  );
+};
 
-// Checkbox.propTypes = {
-//   appearance: PropTypes.oneOf(['primary', 'secondary']),
-//   id: PropTypes.string.isRequired,
-//   label: PropTypes.string.isRequired,
-//   hideLabel: PropTypes.bool,
-//   error: PropTypes.string,
-//   children: PropTypes.node,
-// };
+Checkbox.propTypes = {
+  checked: PropTypes.bool.isRequired,
+  onChange: PropTypes.func.isRequired,
+  children: PropTypes.node,
+};
 
-// Checkbox.defaultProps = {
-//   appearance: 'primary',
-//   hideLabel: false,
-//   error: null,
-// };
+Checkbox.defaultProps = {
+  children: null,
+};
 
-export { CustomCheckbox }
+
 export default Checkbox;

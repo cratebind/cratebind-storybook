@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Checkbox, { CustomCheckbox } from '../components/Checkbox';
+import Checkbox from '../components/Checkbox';
 
 export default {
   title: 'Checkbox',
@@ -8,20 +8,14 @@ export default {
   },
 };
 
-export const nativeBrowserCheckbox = () => (
-  <form>
-    <Checkbox>Option 1</Checkbox>
-  </form>
-);
-
-export const customCheckbox = () => {
+export const CustomCheckbox = () => {
   const [checked, setChecked] = useState(false);
 
   return (
     <form>
-      <CustomCheckbox checked={checked} onChange={setChecked}>
+      <Checkbox checked={checked} onChange={setChecked}>
         Option 1
-      </CustomCheckbox>
+      </Checkbox>
     </form>
   );
 };
