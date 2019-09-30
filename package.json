@@ -1,6 +1,6 @@
 {
   "name": "@cratebind/react-components",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Cratebind React Component Library",
   "private": false,
   "author": "cratebind",
@@ -55,7 +55,8 @@
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.2",
     "rollup-plugin-typescript2": "^0.17.0",
-    "rollup-plugin-url": "^1.4.0"
+    "rollup-plugin-url": "^1.4.0",
+    "semantic-release": "^15.13.24"
   },
   "files": [
     "dist"

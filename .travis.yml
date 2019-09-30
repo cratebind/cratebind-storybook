@@ -6,6 +6,7 @@ script:
   - yarn type-check
   - yarn test --coverage
   - yarn build
+  - npx semantic-release
 cache:
   - yarn
 before_install:
