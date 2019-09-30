@@ -20,13 +20,13 @@ node_js:
   - 10
 
 jobs:
-  include:
-    - stage: test
-    - script:
-      - yarn lint
-      - yarn type-check
-      # - yarn test --passWithNoTests
-      - yarn build
+  # include:
+  #   - stage: test
+  #   - script:
+  #     - yarn lint
+  #     - yarn type-check
+  #     # - yarn test --passWithNoTests
+  #     - yarn build
   include:
     # Define the release stage that runs semantic-release
     - stage: release
