@@ -7,7 +7,9 @@
 ## Install
 
 ```bash
-npm install --save cratebind-react-library
+npm install --save @cratebind/react-components
+# OR
+yarn add @cratebind/react-components
 ```
 
 ## Usage
