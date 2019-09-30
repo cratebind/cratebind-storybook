@@ -12,22 +12,16 @@ export type CheckboxProps = CustomProps & CheckboxHTMLProps;
 
 const Checkbox = ({ checked, children, ...props }: CheckboxProps) => {
   return (
-      <div role="group" aria-labelledby="id-group-label">
-        {/*
-        wrapping a checkbox in a label makes the text also clickable,
-        which is an accessibility requirement
-      */}
-        <label>
-          <input
-            type="checkbox"
-            checked={checked}
-            aria-checked={checked}
-            tabIndex={0}
-            {...props}
-          />
-          {children}
-        </label>
-      </div>
+    <label>
+      <input
+        type="checkbox"
+        checked={checked}
+        aria-checked={checked}
+        tabIndex={0}
+        {...props}
+      />
+      {children}
+    </label>
   );
 };
 
