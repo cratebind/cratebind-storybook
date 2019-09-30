@@ -25,7 +25,7 @@ jobs:
     - script:
       - yarn lint
       - yarn type-check
-      - yarn test --passWithNoTests
+      # - yarn test --passWithNoTests
       - yarn build
   include:
     # Define the release stage that runs semantic-release
