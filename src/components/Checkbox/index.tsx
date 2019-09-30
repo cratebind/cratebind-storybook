@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 
 export type CheckboxHTMLProps = React.InputHTMLAttributes<any>;
 
@@ -25,19 +25,19 @@ const Checkbox = ({ checked, children, ...props }: CheckboxProps) => {
   );
 };
 
-Checkbox.propTypes = {
-  appearance: PropTypes.oneOf(['primary', 'secondary']),
-  id: PropTypes.string.isRequired,
-  label: PropTypes.string.isRequired,
-  hideLabel: PropTypes.bool,
-  error: PropTypes.string,
-  children: PropTypes.node,
-};
+// Checkbox.propTypes = {
+//   appearance: PropTypes.oneOf(['primary', 'secondary']),
+//   id: PropTypes.string.isRequired,
+//   label: PropTypes.string.isRequired,
+//   hideLabel: PropTypes.bool,
+//   error: PropTypes.string,
+//   children: PropTypes.node,
+// };
 
-Checkbox.defaultProps = {
-  appearance: 'primary',
-  hideLabel: false,
-  error: null,
-};
+// Checkbox.defaultProps = {
+//   appearance: 'primary',
+//   hideLabel: false,
+//   error: null,
+// };
 
 export default Checkbox;
