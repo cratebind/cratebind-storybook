@@ -1,6 +1,6 @@
 {
   "name": "@cratebind/react-components",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Cratebind React Component Library",
   "private": false,
   "author": "cratebind",
@@ -38,21 +38,6 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public --docs",
     "build-storybook": "build-storybook -s public"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
   },
   "devDependencies": {
     "@storybook/addon-actions": "^5.2.1",

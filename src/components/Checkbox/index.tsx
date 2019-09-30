@@ -3,12 +3,12 @@ import PropTypes from 'prop-types'
 
 export type Props = {
   onClick: () => void
-  label: string
+  children: React.ReactNode
   checked: boolean
   onChange: () => void
 }
 
-const Checkbox = ({ checked, onChange, label }: Props) => {
+const Checkbox = ({ checked, onChange, children }: Props) => {
   return (
       <div role="group" aria-labelledby="id-group-label">
         {/*
@@ -23,7 +23,7 @@ const Checkbox = ({ checked, onChange, label }: Props) => {
             tabIndex={0}
             aria-checked={checked}
           />
-          {label}
+          {children}
         </label>
       </div>
   );
@@ -35,6 +35,7 @@ Checkbox.propTypes = {
   label: PropTypes.string.isRequired,
   hideLabel: PropTypes.bool,
   error: PropTypes.string,
+  children: PropTypes.node,
 };
 
 Checkbox.defaultProps = {
