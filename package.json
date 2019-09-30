@@ -5,7 +5,7 @@
   "private": false,
   "author": "cratebind",
   "license": "MIT",
-  "repository": "cratebind/cratebind-react-library",
+  "repository": "cratebind/cratebind-storybook",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
   "jsnext:main": "dist/index.es.js",
@@ -46,6 +46,8 @@
     "@storybook/addon-links": "^5.2.1",
     "@storybook/addons": "^5.2.1",
     "@storybook/react": "^5.2.1",
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.5.0",
     "eslint-config-cratebind": "^2.0.8",
     "rollup": "^0.62.0",
@@ -60,5 +62,10 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
