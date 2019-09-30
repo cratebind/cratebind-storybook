@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 
-export type Props = {
-  onClick: () => void
-  children: React.ReactNode
+export type CheckboxHTMLProps = React.InputHTMLAttributes<any>;
+
+export type CustomProps = {
+  children?: React.ReactNode
   checked: boolean
-  onChange: () => void
 }
 
-const Checkbox = ({ checked, onChange, children }: Props) => {
+export type CheckboxProps = CustomProps & CheckboxHTMLProps;
+
+const Checkbox = ({ checked, children, ...props }: CheckboxProps) => {
   return (
       <div role="group" aria-labelledby="id-group-label">
         {/*
@@ -18,10 +20,10 @@ const Checkbox = ({ checked, onChange, children }: Props) => {
         <label>
           <input
             type="checkbox"
-            onChange={onChange}
             checked={checked}
-            tabIndex={0}
             aria-checked={checked}
+            tabIndex={0}
+            {...props}
           />
           {children}
         </label>

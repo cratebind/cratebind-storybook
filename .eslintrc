@@ -1,3 +1,13 @@
 {
-  "extends": ["cratebind"]
+  "extends": ["cratebind"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js",
+          ".jsx",
+          ".ts",
+          ".tsx"]
+      }
+    }
+  }
 }

@@ -1,5 +1,4 @@
 import React from 'react';
-// import { action } from '@storybook/addon-actions';
 import Checkbox from '../components/Checkbox';
 
 export default {
@@ -9,9 +8,9 @@ export default {
   },
 };
 
-export const text = () => (
+export const nativeBrowserCheckbox = () => (
   <form>
-    <Checkbox label="Option 1" />
+    <Checkbox>Option 1</Checkbox>
   </form>
 );
 
