@@ -20,15 +20,18 @@
     "styled-components": "4.x"
   },
   "dependencies": {
+    "@types/classnames": "^2.2.9",
     "@types/jest": "24.0.18",
     "@types/node": "12.7.8",
     "@types/react": "16.9.3",
     "@types/react-dom": "16.9.1",
     "@types/styled-components": "^4.1.19",
+    "classnames": "^2.2.6",
     "prop-types": "^15.7.2",
     "react": "^16.10.1",
     "react-dom": "^16.10.1",
     "react-scripts": "3.1.2",
+    "styled-components": "^4.4.0",
     "typescript": "3.6.3"
   },
   "scripts": {
@@ -48,8 +51,11 @@
     "@storybook/addon-docs": "^5.2.1",
     "@storybook/addon-links": "^5.2.1",
     "@storybook/addons": "^5.2.1",
+    "@storybook/preset-scss": "^1.0.2",
     "@storybook/react": "^5.2.1",
+    "@typescript-eslint/parser": "^2.3.2",
     "commitizen": "^4.0.3",
+    "css-loader": "^3.2.0",
     "cz-conventional-changelog": "3.0.2",
     "eslint": "^6.5.0",
     "eslint-config-cratebind": "^2.0.8",
@@ -59,9 +65,12 @@
     "rollup-plugin-node-resolve": "^3.3.0",
     "rollup-plugin-peer-deps-external": "^2.2.0",
     "rollup-plugin-postcss": "^1.6.2",
+    "rollup-plugin-scss": "^1.0.2",
     "rollup-plugin-typescript2": "^0.17.0",
     "rollup-plugin-url": "^1.4.0",
-    "semantic-release": "^15.13.24"
+    "sass-loader": "^8.0.0",
+    "semantic-release": "^15.13.24",
+    "style-loader": "^1.0.0"
   },
   "files": [
     "dist"

@@ -1,0 +1,17 @@
+.checkbox-container {
+  cursor: pointer;
+  position: relative;
+  height: 1em;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-input {
+  margin: 0 0.4em 0 0;
+  width: 14px;
+  height: 14px;
+  border-radius: 4px;
+  // background-color: ${(p: { checked: boolean }) =>
+  //   p.checked ? '#007bff' : '#fff'};
+  box-shadow: rgb(153, 153, 153) 0px 0px 0px 1px inset;
+}
