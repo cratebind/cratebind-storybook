@@ -1,13 +1,27 @@
 {
   "extends": ["cratebind"],
+  "parser": "@typescript-eslint/parser",
+  "rules": {
+    "react/jsx-filename-extension": 0
+  },
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [".js",
+        "extensions": [
+          ".js",
           ".jsx",
           ".ts",
-          ".tsx"]
+          ".tsx"
+        ]
+      },
+      "babel-module": {
+        "extensions": [
+          ".js",
+          ".jsx",
+          ".ts",
+          ".tsx"
+        ]
       }
     }
-  }
+  },
 }

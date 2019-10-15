@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Checkbox from '../components/Checkbox';
 
+import '../styles/checkbox.scss';
+
 export default {
   title: 'Checkbox',
   parameters: {
