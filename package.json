@@ -69,7 +69,7 @@
     "rollup-plugin-typescript2": "^0.17.0",
     "rollup-plugin-url": "^1.4.0",
     "sass-loader": "^8.0.0",
-    "semantic-release": "^15.13.24",
+    "semantic-release": "^17.2.3",
     "style-loader": "^1.0.0"
   },
   "files": [
